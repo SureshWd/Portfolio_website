@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suresh Kumar Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+   <!-- some styles for toggle button -->
+    <style>
+        /* Day/Night toggle styles */
+        input[type="checkbox"] {
+          display: none;
+        }
+        input[type="checkbox"]:checked ~ .content {
+          background-color: #2d0fb1d7; /* bg-gray-800 */
+        }
+        article{
+            display: flex;
+            width: 70px;
+        }
+       #tog i{
+            font-size: 25px;
+
+        }
+        #moon{
+            background-color: #00ff9d;
+        }
+        
+      </style>
+</head>
+
+<body>
+    <!-- header of the website -->
+    <header class="header">
+        <!-- logo (as name) of website -->
+        <div class="logo">
+            <a href="#"><span>Suresh</span>Kumar</a>
+        </div>
+        <!-- toggle button -->
+           <div class=" flex items-center justify-center min-h-screen">
+            <label class="flex items-center cursor-pointer">
+              <input type="checkbox" id="toggle">
+              <article id="tog" class="ml-2 p-4 bg-gray-500 rounded-full"> <i id="moon" class=" bx bx-moon"></i>
+                <i id="sun" class="bx bx-sun"></i>
+              </article>
+            </label>
+          </div>
+          <!-- menu icon  -->
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <!-- navbar of website -->
+        <nav class="nav-bar">
+            <a href="#home" class="active" style="--i:1">Home</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#skills" style="--i:3">Skills</a>
+            <a href="#services" style="--i:4">Services</a>
+            <a href="#projects" style="--i:5">Projects</a>
+            <a href="#contact" style="--i:6">Contact</a>
+        </nav>
+    </header>
+    <div id="progress">
+        <span id="progress-value"><i class='bx bxs-chevron-up'></i></span>
+    </div>
+    <!-- Home Section of website-->
+    <section class="home" id="home">
+        <div class="home-content">
+            <!-- introduction -->
+            <h3>Hello, It's Me</h3>
+            <h1>Suresh Kumar</h1>
+            <h3>And I'm a <span class="auto"></span></h3>
+            <p style="font-size: 18px;"> MERN Stack developer and a proactive learner of programming languages.
+            </p>
+              <!-- social media icons -->
+            <div class="social-media">
+                <a href="https://in.linkedin.com/in/suresh-kumar-tiwari-930302245/" style="--i:6" target="_blank"><i
+                        class='bx bxl-linkedin'></i></a>
+
+                <a href="https://facebook.com/suresh.tivari.587/" style="--i:7" target="_blank"><i
+                        class='bx bxl-facebook'></i></a>
+
+                <a href="https://github.com/SureshWd/" style="--i:8" target="_blank"><i class='bx bxl-github'></i></a>
+
+                <a href="https://instagram.com/suresh.tivari.587" style="--i:8" target="_blank"><i class='bx bxl-instagram'></i></a>
+
+            <!-- button of download cv -->
+            </div>
+            <div class="Btn">
+                <a href="mailto:sureshkumartiwari2002@gmail.com" class="btn" target="_blank">Download CV</a>
+            </div>
+        </div>
+        <!-- profile image -->
+        <div class="home-image">
+            <img src="/src/images/animations/IMG_20240614_085608.jpg">
+        </div>
+    </section>
+
+    <!-- About Section of website-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img
+            src="./src/images/about.png"
+            style="width: 192rem"
+            class="w-10"
+            alt="about"
+            id="aboutimg"
+          />
+        </div>
+
+        <div class="about-content">
+            <!-- heading -->
+            <h2 class="heading">
+                About <span>Me</span>
+            </h2>
+            <!-- content of about me -->
+            <p style="font-size: 20px">
+                Hello! I'm Suresh Kumar, a passionate MERN(MongoDB, Express, React, and Node.js) Stack Developer with a talent
+            for turning ideas into dynamic web applications and softwares. My journey in
+            coding began with a curiosity for the workings behind everyday
+            websites, quickly evolving into a dedication to developing
+            user-friendly, and efficient web solutions. As an enthusiastic
+            learner, I'm always exploring new technologies and trends to
+            incorporate into my projects. I thrive on challenges and push myself
+            to continuously grow and excel. </p>
+           <p style="font-size:23px"> My portfolio showcases my
+                problem-solving skills, attention to detail, and ability to deliver
+                robust applications, reflecting my commitment to collaboration and
+                creativity. Let's build something amazing together!</p> 
+            <a href="#about" class="btn">Read More</a>
+        </div>
+
+    </section>
+
+    <!-- Skill Section  of website-->
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+<!-- progress bar (linear) -->
+        <div class="skills-container">
+            <div class="skill-bar">
+                <div class="bar">
+                    <div class="info">
+                        <span>HTML / CSS</span>
+                    </div>
+                    <div class="progress-line HTML">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="progress-line JS">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <span>MERN Stack</span>
+                    </div>
+                    <div class="progress-line React">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <span>Python</span>
+                    </div>
+                    <div class="progress-line Py">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <span>Data Structures & Algorithm</span>
+                    </div>
+                    <div class="progress-line DSA">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <span>Java<span>
+                    </div>
+                    <div class="progress-line Java">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <span>DBMS</span>
+                    </div>
+                    <div class="progress-line Mysql">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <!-- progress bar (circular) -->
+            <div class="container">
+                
+              <div class="circle html"   style="--percentage: 84; --color: #ff2972;">
+               <h2 class="number">85<span>%</span></h2>
+               <h4>Team work</h4>
+             </div>
+             <div class="circle"  style="--percentage: 58; --color: #0019fe;">
+              <h2 class="number">70<span>%</span></h2>
+               <h4>problem-solving</h4>
+             </div>
+             <div class="circle"  style="--percentage: 95; --color: #04fc43;">
+             <h2 class="number">95<span>%</span></h2>
+              <h4>creativity</h4>
+            </div>
+            <div class="circle "  style="--percentage: 80; --color: #cefc04;">
+                <h2 class="number">80<span>%</span></h2>
+                 <h4>speaking</h4>
+             </div>
+        </div>
+    </section>
+    <!-- Services section of the website-->
+    <section class="services" id="services">
+        <h2 class="heading">Our<span>Services</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bxs-paint'></i>
+                <h3> Web Design </h3>
+                <p>I provide personalized web design services tailored to meet your
+                    unique needs. With a keen eye for detail and a passion for
+                    creativity, I create visually stunning and highly functional
+                    websites that captivate visitors and drive results. </p>
+                <p>Whether you
+                    need a complete website overhaul or a fresh new design, I ensure
+                    a seamless and user-friendly experience. My focus on responsive
+                    design guarantees that your website looks great and performs
+                    flawlessly on all devices. Trust me to bring your vision to life
+                    with a professional and innovative web design solution.</p>
+
+                <a href="https://trainings.internshala.com/s/v/3310913/2c290f92"
+                    target="-blank" class="btn"> View</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development </h3>
+                <p> I offer tailored web development services to meet your specific
+                    needs. With a strong focus on both functionality and aesthetics,
+                    I create websites that are not only visually appealing but also
+                    highly efficient and user-friendly.</p>
+                <p> Whether you need a
+                    custom-built website, feature enhancements, or backend
+                    development, I ensure a seamless and responsive experience
+                    across all devices. My goal is to bring your vision to life with
+                    innovative and reliable web development solutions that drive
+                    results and provide an exceptional user experience.</p>
+                <a href="https://trainings.internshala.com/s/v/3310913/2c290f92" target="-blank"
+                    class="btn">View</a>
+            </div>
+            <div class="services-box">
+                <i class='bx bxs-data'></i>
+                <h3>Database </h3>
+                <p>I offer personalized database services to meet your specific
+                    requirements. With expertise in database design, management, and
+                    optimization, I ensure your data is organized, secure, and
+                    easily accessible.
+                </p>
+                <p> Whether you need database development, data
+                    migration, or performance tuning, I provide tailored solutions
+                    that enhance efficiency and support your business goals. My
+                    focus is on delivering robust and scalable database systems that
+                    provide reliable and high-performance data management, ensuring
+                    your operations run smoothly and effectively.</p>
+                <a href="https://trainings.internshala.com/s/v/3310913/2c290f92" target="-blank"
+                    class="btn">View</a>
+            </div>
+        </div>
+    </section>
+
+    <!--Project section of website  -->
+
+    <section class="project" id="projects">
+        <!-- heading -->
+        <h2 class="heading">Latest <span>Projects</span></h2>
+
+        <div class="project-container">
+
+            <div class="project-box">
+                <img src="./src/images/projects/one.jpg" height="220px" width="150px" alt="">
+                <div class="project-layer">
+                    <h4>Virtual Project </h4>
+                    <p>Visit It</p>
+                    <i class='bx bx-link-external'></i>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <img src="./src/images/projects/p.two.jpg" alt="">
+                <div class="project-layer">
+                    <h4>Coding Practice </h4>
+                    <p>Visit It</p>
+                    <i class='bx bx-link-external'></i>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <img src="./src/images/projects/p.three.jpg" alt="">
+                <div class="project-layer">
+                    <h4>Web Environment </h4>
+                    <p>Visit It</p>
+                    <i class='bx bx-link-external'></i>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <img src="./src/images/projects/p.four.jpg" alt="">
+                <div class="project-layer">
+                    <h4>E-commerce Project </h4>
+                    <p> Visit It </p>
+                    <i class='bx bx-link-external'></i>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <img src="./src/images/projects/p.five.jpg" alt="">
+                <div class="project-layer">
+                    <h4>Teams Project </h4>
+                    <p> Visit It </p>
+                    <i class='bx bx-link-external'></i>
+                </div>
+            </div>
+
+            <div class="project-box">
+                <img src="./src/images/projects/p.six.png" alt="">
+                <div class="project-layer">
+                    <h4> Structure Project </h4>
+                    <p> Visit It </p>
+                    <i class='bx bx-link-external'></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section of website -->
+    <section class="contact" id="contact">
+        <!-- heading -->
+        <h2 class="heading">
+            Contact <span>Me!</span>
+        </h2>
+<!-- contact form -->
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="E-mail Address">
+                <input type="number" placeholder="Mobile Number">
+            </div>
+
+            <textarea name="" id="" cols="30" rows="10" placeholder="Write Your Comments"></textarea>
+            <input type="submit"  value="Send Message " class="btn">
+        </form>
+    </section>
+    <!-- Footer of website -->
+    <footer class="footer" id="footer">
+        <div class="button whatsaap">
+            <div class="icon"><i class='bx bxl-whatsapp'></i></div>
+            <span >8957552471</span>
+        </div>
+        <div class="button mail">
+            <div class="icon"><i class='bx bxl-gmail'></i></div>
+            <span >sureshkumartiwari2002@gmail.com</span>
+        </div>
+
+        <div class="button mail">
+            <div class="icon"><i class='bx bx-location-plus'></i></div>
+            <span>Shrawasti &nbsp; 271804 &nbsp; Uttar Pradesh</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
